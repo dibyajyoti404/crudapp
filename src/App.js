@@ -1,11 +1,12 @@
-
-import ReactTable from './components/Table';
+ 
+import Table from "./components/Table"
+import DesignForm from "./components/DesignForm"
 
 function App() {
   return (
-    <>
-      <ReactTable ></ReactTable>
-      
+    <> 
+    <Table></Table>
+      {/* <DesignForm></DesignForm> */}
     </>
   );
 }

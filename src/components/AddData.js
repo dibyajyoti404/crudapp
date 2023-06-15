@@ -1,25 +1,24 @@
-import React,{useState} from "react"; 
-// import tableData from "./TableData";
-const AddData = ({allUserData,setAllUserData,currentUserData,setCurrentUserData,setRecords}) => {
+import React from "react";  
+const AddData = ({allUserData,setAllUserData,currentUserData,setCurrentUserData,setRecords,isEdit}) => {
 
-  
-    
-    // console.log(allUserData)
+ 
     let handleChange=(event)=>{
         const name=event.target.name;
-        const value=event.target.value;
-        // console.log(name,value)
+        const value=event.target.value; 
         setCurrentUserData({...currentUserData,[name]:value});
     }
-    let handleSubmit=(event)=>{
+    let addUser=(event)=>{
         event.preventDefault();
-        setAllUserData([...allUserData,{...currentUserData,id:allUserData.length+1}])
-        // setRecords(allUserData);
-        console.log(allUserData)
-        setCurrentUserData({id:0,first_name:"",last_name:"",email:"",gender:""})
+        // if(isEdit===false){
+
+            setAllUserData([...allUserData,{...currentUserData,id:allUserData.length+1}]) 
+            console.log(allUserData)
+            setCurrentUserData({id:0,first_name:"",last_name:"",email:"",gender:""} )
+        // }
+            
     }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={addUser}>
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">First Name</label>
         <input
@@ -54,7 +53,7 @@ const AddData = ({allUserData,setAllUserData,currentUserData,setCurrentUserData,
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           name="email"
-          placeholder="Enter email"
+          // placeholder="Enter email"
           onChange={handleChange}
           value={currentUserData.email}
         />

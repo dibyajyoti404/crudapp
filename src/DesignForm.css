@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(20, 177, 231, 1) 0%,
+    rgba(233, 56, 216, 0.5872724089635855) 0%,
+    rgba(112, 24, 121, 1) 40%,
+    rgba(126, 19, 189, 1) 65%,
+    rgba(54, 121, 191, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.modal-content {
+  background-color: white;
+  min-width: 333px;
+  min-height: 400px;
+  padding: 25px;
+  border: 2px solid #bba2bc;
+  border-radius: 6px;
+}
+
+.heading {
+  text-align: center;
+  color: pink;
+  border-bottom: none;
+}
+.heading h1{
+    width:100%;
+}
+
+.form-control {
+  height: 32px;
+  outline: none;
+  height: 32px;
+  outline: none;
+  font-size: 20px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  margin-bottom: 11px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  color: grey;
+}
+
+.modal-btn {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 25px;
+  padding: 8px 14px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  color: #6b6060;
+  box-shadow: 2px 3px 7px pink;
+}
+.drop-down {
+  width: 28%;
+  border: 1px solid grey;
+  outline: none;
+  font-size: 15px;
+  border-radius: 3px;
+  background: #e2dfdf;
+  padding: 6px 5px;
+}
